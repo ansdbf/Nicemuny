@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery-3.4.1.min.js"></script>
+  <title> NiceMuny - Archive Proj. </title>
+</head>
+
+<body>
+  <div class='bigPictureWrapper'>
+    <div class='bigPicture'>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="columns">
+        <div class="column first">
+          <table>
+            <tr>
+              <td>
+                <h1 style="font-size: 20pt"><a href="main.html">Nicemuny</a></h1>
+              </td>
+              <td style="color: red"><i>Space.Visual/Editorial-design.Typography.Architecture.</i></td>
+            </tr>
+            <div class="menu">
+              <table>
+                <tr>
+                  <h1><br></h1>
+                </tr>
+              </table>
+            </div class="menu">
+        </div>
+        <div class="column second">
+        </div>
+        <div class="column third">
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li style="color: red"><a href="Index.html"><b><i>Index</i></b></a></li>
+        <li><a href="Works.html"><i>Works</i></a></li>
+        <li><a href="Proj.html"><i>Projects</i></a></li>
+        <li><a href="Exhibition.html"><i>Exhibitions</i></a></li>
+        <li><a href="PaTI.html"><i>PaTI</i></a></li>
+        <li><a href="Info.html"><i>Info</i></a></li>
+      </ul>
+    </nav>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  </aside>
+
+  <main class="main">
+    <div class="container">
+      <div class="columns">
+        <div class="column fifth">
+          <img src="https://drive.google.com/uc?export=download&id=15p5LCpdclRTedE2mkavEWTSBt_4KOSgG" width="100%">
+
+        </div>
+
+        <div class="column sixth">
+          <h4>늘</h4>
+          <h3>
+              Nov 2019
+          </h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column first">
+
+        </div>
+
+        <div class="column second">
+
+        </div>
+
+        <div class="column third" style="color: gray">Copyright 2021. nicemuny. All rights reserved.</div>
+
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    $(document).ready(function(e) {
+      $(document).on("click", "img", function() {
+        var path = $(this).attr('src')
+        showImage(path);
+      }); //end click event
+      function showImage(fileCallPath) {
+        $(".bigPictureWrapper").css("display", "flex").show();
+        $(".bigPicture")
+          .html("<img src='" + fileCallPath + "' >")
+      } //end fileCallPath
+      $(".bigPictureWrapper").on("click", function(e) {
+        setTimeout(function() {
+          $('.bigPictureWrapper').hide();
+        }, 0);
+      }); //end bigWrapperClick event
+    });
+  </script>
+</body>
